@@ -2,6 +2,7 @@ import { Container, Links } from './style'
 
 import { Header } from '../../components/header'
 import { Button } from '../../components/button/'
+import { ButtonText } from '../../components/buttonText/'
 import { Section } from '../../components/section'
 import { Tag } from '../../components/tag'
 
@@ -9,6 +10,8 @@ export function Details(){
   return (
     <Container>
       <Header />
+
+      <ButtonText title='excluir nota' />
 
       <Section title='Links úteis'>
         <Links>
