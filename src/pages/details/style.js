@@ -18,7 +18,7 @@ export const Links = styled.ul`
     margin-top: 12px;
 
     a{
-      ${({theme}) => theme.COLORS.WHITE}
+      color: ${({theme}) => theme.COLORS.WHITE};
     }
   }
 `
