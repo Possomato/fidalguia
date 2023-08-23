@@ -16,6 +16,7 @@ export default createGlobalStyle`
 
   h1{
     font-family: 'Libre Baskerville', serif;
+    color: ${({theme}) => theme.COLORS.BLUE_DARK};
   }
 
   body, input, button , textarea {

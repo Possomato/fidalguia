@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Details } from './pages/details/Details.jsx'
+import { Details } from './pages/details/index.jsx'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global'
 
