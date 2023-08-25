@@ -4,6 +4,8 @@ import { Container, Brand, Menu, Search, Content, NewNote } from './style.js'
 import { Header } from '../../components/header'
 import { ButtonText } from '../../components/buttonText'
 import { Input } from '../../components/input'
+import { Section } from '../../components/section'
+import { Note } from '../../components/note'
 
 export function Home(){
   return(
@@ -25,9 +27,23 @@ export function Home(){
       </Search>
 
       <Content>
-
+        <Section title="minhas notas">
+          <Note data={{
+            title: 'Os irmãos Karamázov',
+            tags: [
+              {id: '1', name: 'Dostoiévski'},
+              {id: '2', name: 'Literatura'}
+            ],
+            }} />
+            <Note data={{
+            title: 'Apologia de Sócrates',
+            tags: [
+              {id: '1', name: 'Platão'},
+              {id: '2', name: 'Filosofia'}
+            ],
+            }} />
+        </Section>
       </Content>
-
       <NewNote>
         <FiPlus />
         Criar nota
