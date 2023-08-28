@@ -5,6 +5,7 @@ import { Input } from '../../components/input'
 import { Textarea } from '../../components/textarea'
 import { NoteItem } from '../../components/noteitem'
 import { Section } from '../../components/section'
+import { Button } from '../../components/button'
 
 export function New(){
   return(
@@ -26,6 +27,27 @@ export function New(){
             <NoteItem value="comunidade" />
             <NoteItem isNew placeholder="Novo link" />
           </Section>
+
+          <Section title="Marcadores">
+            <div className="tags">
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem value="Socrates" />
+            <NoteItem isNew placeholder="Nova tag" />
+            </div>
+          </Section>
+
+          <Button title='Salvar' />
         </Form>
       </main>
     </Container>
