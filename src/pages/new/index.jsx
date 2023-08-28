@@ -3,6 +3,8 @@ import { Container, Form } from './style.js'
 import { Header } from '../../components/header'
 import { Input } from '../../components/input'
 import { Textarea } from '../../components/textarea'
+import { NoteItem } from '../../components/noteitem'
+import { Section } from '../../components/section'
 
 export function New(){
   return(
@@ -19,6 +21,11 @@ export function New(){
           <Input placeholder="Título" />
 
           <Textarea placeholder="Observações" />
+
+          <Section title="Links úteis">
+            <NoteItem value="comunidade" />
+            <NoteItem isNew placeholder="Novo link" />
+          </Section>
         </Form>
       </main>
     </Container>
