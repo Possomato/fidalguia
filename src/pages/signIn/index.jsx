@@ -12,7 +12,7 @@ export function SignIn(){
         <h1>Fidalguia</h1>
         <p>Aplicação para salvar e gerenciar suas notas</p>
 
-        <h2>Faça seu longin</h2>
+        <h2>Faça seu login</h2>
 
         <Input
           placeholder="e-mail"
