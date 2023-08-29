@@ -50,6 +50,6 @@ Se você tiver alguma dúvida, sugestão ou comentário, sinta-se à vontade par
 
 Vamos construir o Fidalguia juntos e criar uma plataforma útil para a organização de notas de estudo de grupos de estudos!
 
-## Autor 👨‍💻
+## 👨‍💻 Autor
 
 <a href="https://possomato.vercel.app/" target="_blink">Gabriel Bonifacio Possomato</a>
