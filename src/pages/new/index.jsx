@@ -1,5 +1,7 @@
 import { Container, Form } from './style.js'
 
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/header'
 import { Input } from '../../components/input'
 import { Textarea } from '../../components/textarea'
@@ -16,7 +18,7 @@ export function New(){
         <Form>
           <header>
             <h1>Criar nota</h1>
-            <a href="/">voltar</a>
+            <Link to="/">voltar</Link>
           </header>
 
           <Input placeholder="Título" />
@@ -30,18 +32,6 @@ export function New(){
 
           <Section title="Marcadores">
             <div className="tags">
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
-            <NoteItem value="Socrates" />
             <NoteItem value="Socrates" />
             <NoteItem isNew placeholder="Nova tag" />
             </div>
