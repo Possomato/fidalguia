@@ -2,7 +2,9 @@
 
 Bem-vindo ao repositório do projeto Fidalguia! O Fidalguia é um site desenvolvido com React.js, HTML e CSS, utilizando o React Router para a navegação, o React Icons para a inclusão de ícones e o Vite para o desenvolvimento rápido. Este projeto tem como objetivo principal oferecer uma plataforma para salvar e organizar notas de estudo de grupos de estudos. A parte do front-end já foi completamente desenvolvida e os próximos passos envolvem a criação de uma API Restful para autenticação de usuários, gerenciamento de uploads e a integração desta API com o front-end. Além disso, planejamos fazer o deploy tanto do front-end quanto do back-end para disponibilizar o projeto online.
 
-![Imagem home](src/assets/home.png) ![Imagem 2](src/assets/login.png)
+![Imagem Login](src/assets/login.png)
+
+![Imagem home](src/assets/home.png)
 
 ## 🚀 Funcionalidades Atuais
 
