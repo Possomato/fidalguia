@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 import { api } from '../services/api'
 
@@ -13,9 +13,11 @@ function AuthProvider({ children }){
       const response = await api.post('/sessions', {email, password})
       const { user, token } = response.data
 
+      localStorage.setItem('@fidalguia:user', JSON.stringify(user))
+      localStorage.setItem('@fidalguia:token', token)
+
       api.defaults.headers.authorization = `Bearer ${token}`
-
-
+      setData({ user, token })
 
     } catch(error){
       if(error.response){
@@ -26,6 +28,20 @@ function AuthProvider({ children }){
     }
 
   }
+
+  useEffect(() => {
+    const token = localStorage.getItem('@fidalguia:token')
+    const user = localStorage.getItem('@fidalguia:user')
+
+    if(token && user){
+      api.defaults.headers.authorization = `Bearer ${token}`
+
+      setData({
+        token,
+        user: JSON.parse(user)
+      })
+    }
+  }, [])
 
   return(
     <AuthContent.Provider value={{ signIn, user: data.user }}>
