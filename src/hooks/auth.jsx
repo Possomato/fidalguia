@@ -29,6 +29,13 @@ function AuthProvider({ children }){
 
   }
 
+  function signOut(){
+    localStorage.removeItem('@fidalguia:token')
+    localStorage.removeItem('@fidalguia:user')
+
+    setData({})
+  }
+
   useEffect(() => {
     const token = localStorage.getItem('@fidalguia:token')
     const user = localStorage.getItem('@fidalguia:user')
@@ -44,7 +51,11 @@ function AuthProvider({ children }){
   }, [])
 
   return(
-    <AuthContent.Provider value={{ signIn, user: data.user }}>
+    <AuthContent.Provider value={{
+        signIn,
+        user: data.user,
+        signOut
+      }}>
       {children }
     </AuthContent.Provider>
   )
