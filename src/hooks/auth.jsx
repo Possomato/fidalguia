@@ -36,6 +36,23 @@ function AuthProvider({ children }){
     setData({})
   }
 
+  async function updateProfile({ user }){
+    try { 
+      await api.put('/users', user)
+      localStorage.setItem('@fidalguia:user', JSON.stringify(user))
+
+      setData({ user, token: data.token })
+
+      alert('Perfil atualizado!')
+    } catch(error){
+      if(error.response){
+        alert(error.response.data.message)
+      } else{
+        alert('não foi possível atualizar o perfil')
+      }
+    }
+  }
+
   useEffect(() => {
     const token = localStorage.getItem('@fidalguia:token')
     const user = localStorage.getItem('@fidalguia:user')
@@ -53,15 +70,16 @@ function AuthProvider({ children }){
   return(
     <AuthContent.Provider value={{
         signIn,
-        user: data.user,
-        signOut
+        signOut,
+        updateProfile,
+        user: data.user
       }}>
       {children }
     </AuthContent.Provider>
   )
 }
 
-function useAuth(){
+function  useAuth(){
   const context = useContext(AuthContent)
 
   return context
