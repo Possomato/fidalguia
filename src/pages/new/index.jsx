@@ -45,6 +45,14 @@ export function New(){
   }
 
   async function handleNewNote(){
+    if(!title){
+      return alert('Digite o título da nota!')
+    }
+
+    if(!description){
+      return alert('Digite o desenvolvimento da nota!')
+    }
+
     await api.post('/notes', {
       title,
       description,
