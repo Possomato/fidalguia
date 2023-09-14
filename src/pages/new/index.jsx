@@ -12,6 +12,9 @@ import { Section } from '../../components/section'
 import { Button } from '../../components/button'
 
 export function New(){
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState('')
+
   const [links, setLinks] = useState([])
   const [newLink, setNewLink] = useState('')
 
@@ -22,6 +25,10 @@ export function New(){
 
   function handleRemoveLink(deleted){
     setLinks(prevState => prevState.filter(link => link !== deleted))
+  }
+
+  function handleAddTags(){
+    setTags(prevState => [...prevState, newTag])
   }
 
   return(
@@ -60,8 +67,22 @@ export function New(){
 
           <Section title="Marcadores">
             <div className="tags">
-            <NoteItem value="Socrates" />
-            <NoteItem isNew placeholder="Nova tag" />
+              {
+                tags.map((tag, index) => (
+                  <NoteItem
+                    key={String(index)}
+                    value={tag}
+                    onClick={() => {}}
+                  />
+                ))
+              }
+            <NoteItem
+              isNew
+              placeholder="Nova tag"
+              onChange={e => setNewTag(e.target.value)}
+              value={newTag}
+              onClick={handleAddTags}
+            />
             </div>
           </Section>
 
